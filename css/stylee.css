@@ -8,7 +8,6 @@ html{
 .fs {
     font-size: 22px !important;
 }
-
 nav{
     background-color: transparent !important;
     transition: background-color 0.2s ;
@@ -50,16 +49,12 @@ nav{
 .donors__BTN{
     margin: 0 0.6em !important
 }
-
-/* resiterArea css */
 .registerMain img{
     width: 5em;
 }
-
 .Background{
     background: linear-gradient(to right,rgb(246, 243, 243),rgb(231, 228, 228))
 }
-/* index css */
 #donate_Parallax{
     height: 25em !important;
 }
