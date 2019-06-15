@@ -31,13 +31,13 @@ function logOut() {
         // Sign-out successful.
         window.location = "indexM.html"
     }).catch(function (error) {
-        // An error happened.
+        // An error generated.
         console.log(error.message)
     });
 }
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        window.location="userMain.html"
+        window.location="donors.html"
         console.log("User Signed In")
     }
 });
