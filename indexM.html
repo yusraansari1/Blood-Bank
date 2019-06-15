@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Donate Blood</title>
+
+    <link rel='stylesheet' type='text/css' href='stylee.css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Ramabhadra&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+    <!--Let browser know website is optimized for mobile-->
+
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+
+    <!--<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>-->
+
+
+
+</head>
+
+<body class="grey lighten-4">
+    <!-- Navigation bar starts here -->
+    <div class="navbar-fixed">
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#pageSlide" class="brand-logo heading">DonateBlood</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#pageSlide" class="texts">Home</a></li>
+                    <li><a href="#donors" class="texts">Donors</a></li>
+                    <li><a href="#contact" class="texts">Contact</a></li>
+                    <li><a href="registerArea.html#logIn" class="texts">Log In</a></li>
+                    <li><a href="registerArea.html#register" class="texts black darken-4">Become A Donor</a></li>
+                </ul>
+            </div>
+        </nav>
+        <img src="walll.jpg" class="maxx">
+
+
+    </div>
+    <!--Navigation bar Ends here -->
+
+    <!-- Side navbar starts here -->
+    <div id="slide-out" class="sidenav">
+        <span><i class="material-icons closing right">close</i></span>
+        <div class="clearfix"></div>
+        <ul>
+            <li><a href="#pageSlide" class="texts">Home</a></li>
+            <li><a href="#donors" class="texts">Donors</a></li>
+            <li><a href="#contact" class="texts">Contact</a></li>
+            <li><a href="registerArea.html#logIn" class="texts">Log In</a></li>
+            <li><a href="registerArea.html#register" class="texts black darken-4 white-text">Become A Donor</a></li>
+        </ul>
+    </div>
+    <!--Side navbar Ends here -->
+
+    <div class="section"></div>
+    <div id="mainContent">
+        <div class="container " id="donors">
+
+            <h1 class="center heading red-text">DONORS</h1>
+
+            <table class="striped z-depth-3 centered highlight">
+
+                <thead>
+                    <th class="texts">S No</th>
+                    <th class="texts red-text text-darken-4">Blood Group</th>
+                    <th class="texts red-text text-darken-4">Donor's Name</th>
+                    <th></th>
+                </thead>
+                <tbody id="donorsList">
+
+                </tbody>
+            </table>
+
+        </div>
+          <br/><br/>
+          <div class="section grey lighten-2 center">
+            <h5 class="red-text container row section"><div class="col s8 m4">20 | Number of DonateBlood donation centers across Pakistan.<div class="vl"></div>
+            </div>
+            <div class="col s8 m4">2 | Every two seconds someone in the Pakistan needs blood.<div class="vl"></div></div>
+            <div class="col s8 m4">0.2M | Number of donations DonateBlood collects each year.<div class="vl"></div></div>
+            </h5>
+        </div>
+
+        <div id="aboutUs" class="section">
+            <h1 class="heading black-text center">News, Update and Features</h1>
+            <div class="container row">
+                <div class="col s8 m4">
+                    <h5 class="red-text text-darken-4">Are you an A or B negative donor?</h5><img src="12.jpg" class="hnw">
+                    <p>We need you to give blood. Please book an appointment as soon as poosible.</p>
+                </div>
+                <div class="col s8 m4">
+                    <h5 class="red-text text-darken-4">#MyBloodStory</h5><br/><img src="9.png" class="hne"><p>Celebrate the personal stories behind blood donation and transfusion this National Blood Week.</p>
+                   
+                </div>
+                <div class="col s8 m4">
+                    <h5 class="red-text text-darken-4">Unsure whether you can donate?</h5><img src="8.png" class="hnw"><p>Use our Health, Eligibility and Travel tool to confirm that you're ok to give blood.</p>
+            </div>
+        </div></div>
+         
+        <!--<div class="section grey lighten-2 center">
+            <h5 class="red-text container row section"><div class="col s8 m4">20 | Number of DonateBlood donation centers across Pakistan.<div class="vl"></div>
+            </div>
+            <div class="col s8 m4">2 | Every two seconds someone in the Pakistan needs blood.<div class="vl"></div></div>
+            <div class="col s8 m4">0.2M | Number of donations DonateBlood collects each year.<div class="vl"></div></div>
+            </h5>
+        </div>-->
+
+        <div class="section"></div>
+
+        <div class="parallax-container" id="donate_Parallax">
+            <div class="parallax"><img src="don.jpg">
+
+            </div>
+            <div class="section center container black-text">
+                <h3><q> If you’re a blood donor, you’re a super hero to someone, somewhere, who received your gracious gift of life.
+ </q></h3>
+                
+            </div>
+        </div>
+        <br/>
+        <!--<div class="section black lighten-2 center">
+            <h5 class="red-text container row section"><div class="col s8 m4">20 | Number of DonateBlood donation centers across Pakistan.<div class="vl"></div>
+            </div>
+            <div class="col s8 m4">2 | Every two seconds someone in the Pakistan needs blood.<div class="vl"></div></div>
+            <div class="col s8 m4">0.2M | Number of donations DonateBlood collects each year.<div class="vl"></div></div>
+            </h5>
+        </div>-->
+
+        <div id="contact" class="container row">
+            <h1 class="heading black-text center">Want more info? </h1>
+            <div class="col s9 m4 center">
+                <p class="texts"> You can contact us on: </p>
+                <a href="www.facebook.com" class="links"><i class="fab fa-facebook-square blue-text text-darken-4"></i></a><br/>
+                <a href="www.instagram.com" class="links"> <i class="fab fa-instagram purple-text text-darken-4"></i>
+                </a><br/>
+                <a href="www.twitter.com" class="links"> <i class="fab fa-twitter blue-text"></i>
+                </a><br/>
+                <a href="www.whatsapp.com" class="links"> <i class="fab fa-whatsapp green-text"></i>
+                </a>
+
+            </div>
+            <div class="col s15 m8">
+                <form action="JavaScript:void(0)" ><br/>
+                    <fieldset class="center fs">
+                        <p>DonateBlood, one of the nation’s oldest and largest nonprofit community blood service providers, supplies comprehensive transfusion medicine services to nearly 1,000 hospitals and health care partners for patients in need across 10 states.</p>
+                </fieldset>
+                
+                </form>
+            </div>
+
+            
+        
+        </div>
+
+       <div class="red darken-4 white-text center footer-copyright cr">
+
+        <p class="texts cr">
+               © 2019 DonateBlood. All Rights Reserved. Website made by YUSRA ANSARI.
+        </p>
+       </div>
+</div>
+        <!-- Modal Structure for Displaying The Donor's Profile To Public Access -->
+        <div id="donorDetails" class="modal">
+            <div class="modal-content">
+                <h1 class="heading red-text center">Donor's Profile</h1>
+                <div class="card">
+                    <div class="card-content">
+                        <table>
+                            <tbody>
+                                <tr class="texts">
+                                    <td>Name: </td>
+                                    <td class="profileSpecs"></td>
+                                </tr>
+                                <tr class="texts">
+                                    <td>Blood Group: </td>
+                                    <td class="profileSpecs"></td>
+                                </tr>
+                                <tr class="texts">
+                                    <td>Address: </td>
+                                    <td class="profileSpecs"></td>
+                                </tr>
+                                <tr class="texts">
+                                    <td>Contact No: </td>
+                                    <td class="profileSpecs"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close btn red">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $('.modal').modal({
+            opacity: 0.9,
+            inDuration: 200,
+        });
+        $('.sidenav')
+            .sidenav()
+            .on('click tap', '.closing', () => {
+                $('.sidenav').sidenav('close');
+            });
+        $('.slider').slider({
+            indicators: false,
+            transition: 900,
+            interval: 3000,
+            height: 600
+        });
+        $('.parallax').parallax();
+    });
+    window.onscroll = () => {
+        const navibar = document.querySelector("nav")
+        if (this.scrollY <= 100) {
+            navibar.className = ''
+        }
+        else {
+            navibar.className = "red"
+        }
+    }
+</script>
+<script>
+var firebaseConfig = {
+    apiKey: "AIzaSyDGr0njUQ1AYrXYeOj4xSz7dBS06ERZrCg",
+    authDomain: "blood-bank-app-de0e4.firebaseapp.com",
+    databaseURL: "https://blood-bank-app-de0e4.firebaseio.com",
+    projectId: "blood-bank-app-de0e4",
+    storageBucket: "blood-bank-app-de0e4.appspot.com",
+    messagingSenderId: "1084714040544",
+    appId: "1:1084714040544:web:dad5dc1f8a624ec7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var db=firebase.firestore()
+</script>
+
+
+<!--<script src="firebase.js"></script>-->
+<script src='mainn.js'></script>
+<script src="authentication.js"></script>
+
+</html>
